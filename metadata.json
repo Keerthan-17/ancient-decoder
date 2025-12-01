@@ -1,0 +1,5 @@
+{
+  "name": "Ancient Decode",
+  "description": "An interactive tool for translating Ancient Egyptian hieroglyphs using AI. Users can annotate specific symbols to receive real-time translation and probability analysis.",
+  "requestFramePermissions": []
+}
