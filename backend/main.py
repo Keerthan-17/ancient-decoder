@@ -51,8 +51,8 @@ async def load_model():
     num_classes = len(class_names)
     model.classifier[1] = torch.nn.Linear(model.classifier[1].in_features, num_classes)
     
-    # Load trained weights - UPDATE THIS PATH to your model location
-    model_path = "model/EfficientNetV2-S_best_model2.pth"  # Adjust path as needed
+    # Load trained weights
+    model_path = "model/EfficientNetV2-S_best_model2.pth"
     model.load_state_dict(torch.load(model_path, map_location=DEVICE))
     model.to(DEVICE)
     model.eval()
