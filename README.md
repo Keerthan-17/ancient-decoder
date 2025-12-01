@@ -58,13 +58,14 @@ Built for researchers, students, historians, and anyone fascinated by ancient sc
 
 ## 📂 Project Structure  
 
+```
 ancient-decoder/
 ├── frontend/ # React UI
 ├── backend/ # FastAPI backend + model
 ├── model/ # Model weights
 ├── dataset/ # Symbol data + metadata
 └── README.md
-
+```
 ---
 
 ## 🛠️ Installation & Setup  
