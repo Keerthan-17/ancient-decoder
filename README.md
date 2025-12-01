@@ -1,75 +1,112 @@
-# 🏺 Ancient Script Decoder
-*AI-powered Hieroglyph Recognition & Translation*
+# 🏺 Ancient Script Decoder  
+### **AI-Powered Hieroglyph Recognition & Translation**
 
 | ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)  ![React](https://img.shields.io/badge/Frontend-React-%2361DAFB?logo=react&logoColor=black)  ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)  ![License](https://img.shields.io/badge/License-MIT-green)  ![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange)  ![Status](https://img.shields.io/badge/Project-Active-success)  |
 ---
 
-## 🌍 About the Project  
-Ancient Egyptian hieroglyphs are fascinating but hard to read.  
-This project makes them accessible!  
+## 📌 Overview  
+**Ancient Script Decoder** is an AI-powered system that recognizes **Egyptian hieroglyphs** from scanned images and translates them into **English** using a deep learning model trained on curated hieroglyph datasets.
 
-👉 Upload a hieroglyphic image → crop a symbol → our AI matches it against a database → get the **top 5 similar symbols** with:  
-- ✅ **Gardiner Code** (official classification)  
-- ✅ **English meaning/word**  
-- ✅ **Match percentage** (confidence score)  
+Upload an image → Crop a symbol → The AI predicts top-5 matching hieroglyphs → Displays:  
+- Gardiner Code  
+- English meaning  
+- Confidence score  
 
-This helps students, researchers, and history enthusiasts understand hieroglyphs with ease.  
+Built for researchers, students, historians, and anyone fascinated by ancient scripts.
 
 ---
 
 ## ✨ Features  
-- 📤 Upload hieroglyphic images  
-- ✂️ Crop and select specific symbols  
-- 🔍 Get **Top-5 symbol matches** instantly  
-- 🏷️ View **Gardiner Code + English meaning**  
-- 📊 Matching percentage for transparency  
-- 💾 Feedback loop (future): improve model with user corrections  
+- 📤 Upload images containing hieroglyphs  
+- ✂️ Crop/select individual symbols  
+- 🤖 AI model predicts Top-5 matches  
+- 🏷️ Shows Gardiner code + English meaning  
+- 📊 Displays confidence score for each prediction  
+- ⚡ Smooth React + Python integration  
+- 🔍 Fast similarity search using embeddings  
 
 ---
 
+## 🧠 Tech Stack  
 
-## 🛠️ Tech Stack  
-- **Frontend** → React + Tailwind + React Easy Crop  
-- **Backend** → FastAPI (Python)  
-- **AI/ML** → PyTorch + FAISS (vector search)  
-- **Database** → CSV / SQLite (for symbol metadata)  
+### **Frontend**
+- React  
+- TailwindCSS  
+- React Image Crop  
+
+### **Backend**
+- FastAPI  
+- Python  
+- PyTorch  
+- FAISS / Cosine Similarity  
+
+### **ML / Data**
+- Custom image embedding model  
+- Hieroglyph dataset  
+- Symbol metadata (CSV)  
 
 ---
 
-## 🚀 Getting Started  
+## 🚀 System Architecture  
+1. User uploads & crops symbol  
+2. Backend preprocesses image  
+3. Model generates vector embeddings  
+4. Similarity search finds closest symbols  
+5. Metadata (meaning + code) returned  
 
-### 1️⃣ Clone the repo
+---
+
+## 📂 Project Structure  
+
+ancient-decoder/
+├── frontend/ # React UI
+├── backend/ # FastAPI backend + model
+├── model/ # Model weights
+├── dataset/ # Symbol data + metadata
+└── README.md
+
+---
+
+## 🛠️ Installation & Setup  
+
+### **1️⃣ Clone the Repository**
 ```bash
-git clone https://github.com/Keerthan-17/ancient-script-decoder.git
-cd ancient-script-decoder
+git clone https://github.com/Keerthan-17/ancient-decoder
+cd ancient-decoder
 ```
-
-### 2️⃣ Install backend dependencies
+### **2️⃣ Backend Setup**
 ```bash
 cd backend
 pip install -r requirements.txt
-```
-
-### 3️⃣ Run backend
-```bash
 uvicorn main:app --reload
 ```
-
-### 4️⃣ Run frontend
+### **3️⃣ Frontend Setup**
 ```bash
 cd frontend
 npm install
 npm start
 ```
+---
+
+## 🖥️ Screenshots
+![alt text](images/image.png)
+![alt text](images/image-1.png)
+![alt text](images/image-2.png)
+![alt text](images/image-3.png)
+
+- Home page – upload page
+- Crop tool – select symbol
+- Prediction result – meanings + top predictions
 
 ---
 
-## 🎯 Roadmap  
-- [x] Upload & crop feature  
-- [x] Symbol matching with FAISS  
-- [ ] Expand dataset with more Gardiner codes  
-- [ ] Add user feedback for corrections  
-- [ ] Deploy demo online  
+## 🎯 Use Cases
+
+- Hieroglyph translation education
+- Archaeology research tools
+- Museum interpretation assistants
+- AI-powered language study apps
+- Digital preservation of ancient scripts
 
 ---
 
