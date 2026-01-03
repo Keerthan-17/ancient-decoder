@@ -40,11 +40,6 @@ Built for researchers, students, historians, and anyone fascinated by ancient sc
 - PyTorch  
 - FAISS / Cosine Similarity  
 
-### **ML / Data**
-- Custom image embedding model  
-- Hieroglyph dataset  
-- Symbol metadata (CSV)  
-
 ---
 
 ## 🚀 System Architecture  
