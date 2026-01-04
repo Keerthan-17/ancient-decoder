@@ -143,7 +143,14 @@ async def predict_base64(data: dict):
     try:
         # Decode base64 image
         image_data = data.get("image")
-        if image_data.startswith("data:image"):
+        if not image_data:
+            return {
+                "success": False,
+                "error": "No image data provided"
+            }
+        
+        # Handle data URL format (data:image/...;base64,...)
+        if isinstance(image_data, str) and image_data.startswith("data:image"):
             image_data = image_data.split(",")[1]
         
         image_bytes = base64.b64decode(image_data)
