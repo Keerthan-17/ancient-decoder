@@ -85,7 +85,7 @@ function App() {
                 <p className="text-gray-500 mb-8">Upload a clear image of Egyptian Hieroglyphs to begin translation.</p>
                 
                 <label className="inline-flex items-center justify-center px-8 py-4 bg-egypt-600 hover:bg-egypt-700 text-white rounded-lg cursor-pointer transition-transform hover:scale-105 shadow-md">
-                  <span className="font-bold tracking-wide">Select Image</span>
+                  <span className="font-bold tracking-wide">Upload Image</span>
                   <input type="file" className="hidden" accept="image/*" onChange={handleFileSelect} />
                 </label>
               </div>
